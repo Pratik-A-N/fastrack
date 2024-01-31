@@ -1,113 +1,260 @@
+'use client'
 import Image from "next/image";
+import AppBgImg from "./bgImage";
+import Navbar from "./navbar";
+import appStorelogo from "../public/Assets/app_store.svg";
+import playStorelogo from "../public/Assets/play_store.svg";
+import videoPlaceholder from "../public/Assets/video_placeholder.svg";
+import howto from "../public/Assets/howto.svg";
+import { Inter } from "next/font/google";
+import who from "../public/Assets/who.svg";
+import { Martel_Sans } from "next/font/google";
+import { NextUIProvider } from "@nextui-org/react";
+import { Accordion, AccordionItem } from "@nextui-org/react";
+import Footer from "./footer";
+
+const inter = Inter({ subsets: ["latin"] });
+const martel = Martel_Sans({
+  subsets: ["latin"],
+  weight: ["200", "300", "400", "600", "700", "800", "900"],
+});
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <NextUIProvider>
+      <div className="">
+        <div className="container1 h-screen">
+          {/* <AppBgImg /> */}
+          <div className={`pt-10 pl-12 pr-12 ${inter.className}`}>
+            <Navbar />
+          </div>
+          <div className="content px-16">
+            <div className="mainheading mt-20 w-1/2">
+              <div
+                // className={martel.className}
+                className={`cust-text-8xl ${martel.className} font-bold`}
+              >
+                Learn to be Financial free
+              </div>
+            </div>
+            <div className="subheading w-4/5 mt-5">
+              <div className={`${inter.className} cust-text-xl`}>
+                Step into the world of risk-free crypto trading with our
+                community mock trading app. Practice, learn, and connect with
+                fellow enthusiasts.
+              </div>
+            </div>
+            <div className="stores flex mt-8">
+              <div className="play pr-4">
+                <Image src={playStorelogo} width={180} />
+              </div>
+              <div className="app pl-4">
+                <Image src={appStorelogo} width={163} />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="container2 h-screen bg-white text-black flex items-center justify-center">
+          <div className="flex justify-center">
+            <div className="video-card">
+              <Image src={videoPlaceholder} />
+            </div>
+            <div className="side-content ml-16 flex items-start flex-col">
+              <div
+                className={`mainheading ${martel.className} font-bold cust-text-6xl`}
+              >
+                Learn more about Finance
+              </div>
+              <div className={`subheading ${inter.className} cust-text-xl mt-5`}>
+                Step into the world of risk-free crypto trading with our
+                community mock trading app. Practice, learn, and connect with
+                fellow enthusiasts.
+              </div>
+              <button className="btn-bg-grn px-3 py-3 rounded-lg mt-8">
+                Explore more &#8599;
+              </button>
+            </div>
+          </div>
+        </div>
+        <div className="container3 text-black flex items-center justify-center py-24">
+          <div className="flex justify-center">
+            <div className="side-content w-1/3 mr-16 flex justify-center items-start flex-col">
+              <div
+                className={`mainheading ${martel.className} font-bold cust-text-6xl`}
+              >
+                How to get started?
+              </div>
+              <div className={`subheading ${inter.className} cust-text-xl mt-5`}>
+                Step into the world of risk-free crypto trading with our
+                community mock trading app. Practice, learn, and connect with
+                fellow enthusiasts.
+              </div>
+              <div className="mt-8">
+                <form className="bg-white px-3 py-2 rounded-xl flex">
+                  <span className="py-2">+91</span>
+                  <input
+                    type="phone"
+                    name="name"
+                    placeholder="Enter Mobile No."
+                    className="mx-3 cust-w"
+                  />
+                  <button
+                    type="submit"
+                    className="btn-bg-grn px-3 py-2 rounded-lg"
+                  >
+                    Signup
+                  </button>
+                </form>
+              </div>
+            </div>
+            <div className="video-card">
+              <Image src={howto} width={600} height={600} />
+            </div>
+          </div>
+        </div>
+        <div className="container2 h-screen bg-white text-black flex items-center justify-center">
+          <div className="flex justify-center">
+            <div className="video-card">
+              <Image src={who} />
+            </div>
+            <div className="side-content w-1/3 ml-16 flex justify-center items-start flex-col">
+              <div
+                className={`mainheading ${martel.className} font-bold cust-text-6xl`}
+              >
+                Who we are?
+              </div>
+              <div className={`subheading ${inter.className} cust-text-xl mt-5`}>
+                Step into the world of risk-free crypto trading with our
+                community mock trading app. Practice, learn, and connect with
+                fellow enthusiasts.
+              </div>
+              <button className="btn-bg-grn px-3 py-3 rounded-lg mt-8">
+                Know more &#8594;
+              </button>
+            </div>
+          </div>
+        </div>
+        <div className="container3 text-black py-24">
+          <div className="flex justify-center">
+            <div className="mx-16 flex-col">
+              <div
+                className={`mainheading ${martel.className} font-bold text-6xl`}
+              >
+                Our success story
+              </div>
+              <div className={`subheading ${inter.className} text-xl mt-5`}>
+                We have engaged with over 600+ colleges, reaching more than
+                18,00,000+ students. We have forged associations with over 30+
+                prominent brands. We have successfully organized more than 100+
+                competitions, with each competition seeing over 50,000+ trades.
+              </div>
+            </div>
+          </div>
+          <div className="flex justify-center mt-16">
+            <div className="flex">
+              <div className="college">
+                <div className="num text-7xl ">600+</div>
+                <div className="name text-center text-2xl font-medium">
+                  Colleges
+                </div>
+              </div>
+              <div className="student">
+                <div className="num text-7xl">1.8M</div>
+                <div className="name text-center text-2xl font-medium">
+                  Students
+                </div>
+              </div>
+              <div className="compi">
+                <div className="num text-7xl">100+</div>
+                <div className="name text-center text-2xl font-medium">
+                  Competition
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="brand flex flex-col items-center mt-16">
+            <div className={`brand-heading ${martel.className} text-2xl`}>
+              Associated Brands
+            </div>
+            <div className="row1 flex mt-8">
+              <div className="box mx-3"></div>
+              <div className="box mx-3"></div>
+              <div className="box mx-3"></div>
+              <div className="box mx-3"></div>
+              <div className="box mx-3"></div>
+              <div className="box mx-3"></div>
+              <div className="box mx-3"></div>
+            </div>
+            <div className="row1 flex mt-8">
+              <div className="box mx-3"></div>
+              <div className="box mx-3"></div>
+              <div className="box mx-3"></div>
+              <div className="box mx-3"></div>
+              <div className="box mx-3"></div>
+              <div className="box mx-3"></div>
+            </div>
+            <div className="row1 flex mt-8">
+              <div className="box mx-3"></div>
+              <div className="box mx-3"></div>
+              <div className="box mx-3"></div>
+              <div className="box mx-3"></div>
+              <div className="box mx-3"></div>
+              <div className="box mx-3"></div>
+              <div className="box mx-3"></div>
+            </div>
+          </div>
+        </div>
+        <div className="container2 h-auto bg-white text-black px-32 pt-20 pb-36">
+          <div className={`faq ${martel.className} text-5xl`}>FAQ’s</div>
+          <div className="list">
+            <Accordion>
+              <AccordionItem
+                key="1"
+                aria-label="Is there a cost for learning?"
+                title="Is there a cost for learning?"
+                className="my-5"
+              >
+                {/* {defaultContent} */}
+              </AccordionItem>
+              <AccordionItem
+                key="2"
+                aria-label="Can students are eligible for competition?"
+                title="Can students are eligible for competition?"
+                className="my-5"
+              >
+                {/* {defaultContent} */}
+              </AccordionItem>
+              <AccordionItem
+                key="3"
+                aria-label="How trading competition can help me?"
+                title="How trading competition can help me?"
+                className="my-5"
+              >
+                Engage in a unique learning experience where theory meets practice. The competition offers a dynamic platform to apply classroom knowledge to real-world trading scenarios.
+              </AccordionItem>
+              <AccordionItem
+                key="4"
+                aria-label="Is Fastrack available on App store?"
+                title="Is Fastrack available on App store?"
+                className="my-5"
+              >
+                {/* {defaultContent} */}
+              </AccordionItem>
+              <AccordionItem
+                key="5"
+                aria-label="Do anyone can create or Host competition"
+                title="Do anyone can create or Host competition"
+                className="my-5"
+              >
+                {/* {defaultContent} */}
+              </AccordionItem>
+            </Accordion>
+          </div>
+        </div>
+        <div>
+          <Footer/>
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </NextUIProvider>
   );
 }

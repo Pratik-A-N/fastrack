@@ -31,3 +31,83 @@ body {
     text-wrap: balance;
   }
 }
+
+.container1{
+  background-image: url('../public/Assets/bg.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.custom-bg{
+  background-color: rgba(19, 19, 29, 0.6);
+}
+
+.btn-bg-grn{
+  background-color: rgba(0, 204, 102, 1);
+  color: white;
+}
+
+.container3{
+  background-color: rgba(244, 244, 244, 1);
+  ;
+}
+
+.num{
+  color: rgba(0, 204, 102, 1);
+}
+
+.name{
+  color: rgba(65, 65, 65, 1);
+}
+
+.brand-heading{
+  color: rgba(113, 117, 135, 1);
+}
+
+.box{
+  width: 15vh;
+  height: 10vh;
+  background-color: rgba(217, 217, 217, 1);
+}
+
+.footer-text-grey{
+  color: rgba(69, 69, 69, 1);
+}
+
+.college, .student, .compi{
+  padding-left: 8vw;
+  padding-right: 8vw;
+}
+
+.cust-text-8xl{
+  font-size: 12vh;
+  line-height: 1;
+}
+
+.cust-text-6xl{
+  font-size: 10vh;
+  line-height: 1;
+}
+
+.side-content{
+  width: 30vw;
+}
+
+.cust-text-xl{
+  font-size: 2.5vh;
+}
+
+.video-card{
+  width: 40vw;
+  height: 40vh;
+}
+
+@media only screen and (max-width: 1024px) {
+  .cust-text-6xl{
+    font-size: 6vh;
+  }
+
+  .cust-w{
+    width: 12vw;
+  }
+}
