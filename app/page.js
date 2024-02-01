@@ -30,7 +30,7 @@ export default function Home() {
   return (
     <NextUIProvider>
       <div className="">
-        <div className="container1 h-screen">
+        <div className="container1">
           {/* <AppBgImg /> */}
           <div className={`pt-10 pl-12 pr-12 ${inter.className}`}>
             <Navbar />
@@ -61,7 +61,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="container3">
+        <div className="container3 h-auto">
             <div className={`brand-heading ${martel.className} text-center text-2xl py-8`}>
               Associated Brands
             </div>
@@ -70,13 +70,13 @@ export default function Home() {
             </div>
         </div>
         <div className="container2 h-screen bg-white text-black flex items-center justify-center">
-          <div className="flex justify-center">
+          <div className="flex justify-center mob-cont">
             <div className="video-card">
               <Image src={cont1} />
             </div>
-            <div className="side-content ml-16 flex items-start flex-col">
+            <div className="side-content flex items-start flex-col">
               <div
-                className={`mainheading ${martel.className} font-bold text-4xl mt-5`}
+                className={`mainheading ${martel.className} font-bold cust-text-4xl mt-5`}
               >
                 Learn more about Finance
               </div>
@@ -90,14 +90,14 @@ export default function Home() {
                 community mock trading app. Practice, learn, and connect with
                 fellow enthusiasts.
               </div>
-              <button className="btn-bg-grn px-3 py-3 rounded-lg mt-8">
+              <button className="btn-bg-grn cust-p rounded-lg mt-8">
                 Explore more &#8599;
               </button>
             </div>
           </div>
         </div>
-        <div className="container3 text-black flex items-center justify-center py-24">
-          <div className="flex justify-center">
+        <div className="container3 text-black flex items-center justify-center py-24 px-10">
+          <div className="flex justify-center mob-cont">
             <div className="side-content w-1/3 mr-16 flex justify-center items-start flex-col">
               <div
                 className={`mainheading ${martel.className} font-bold cust-text-6xl`}
@@ -127,7 +127,7 @@ export default function Home() {
                 </form>
               </div>
             </div>
-            <div className="video-card">
+            <div className="video-card ind">
               <div className="flex ">
                 <div className={`numb ${playball.className}`}>1</div>
                 <div className="content">
@@ -164,12 +164,12 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="container2 h-screen bg-white text-black flex items-center justify-center">
-          <div className="flex justify-center">
-            <div className="video-card">
+        <div className="container2  bg-white text-black flex items-center justify-center px-10">
+          <div className="flex justify-center mob-cont pt-14">
+            <div className="video-card flex">
               <Image src={who} />
             </div>
-            <div className="side-content w-1/3 ml-16 flex justify-center items-start flex-col">
+            <div className="side-content ind flex justify-center items-start flex-col">
               <div
                 className={`mainheading ${martel.className} font-bold cust-text-6xl`}
               >
@@ -180,7 +180,7 @@ export default function Home() {
                 community mock trading app. Practice, learn, and connect with
                 fellow enthusiasts.
               </div>
-              <button className="btn-bg-grn px-3 py-3 rounded-lg mt-8">
+              <button className="btn-bg-grn cust-p rounded-lg mt-8">
                 Know more &#8594;
               </button>
             </div>
@@ -190,11 +190,11 @@ export default function Home() {
           <div className="flex justify-center">
             <div className="mx-16 flex-col">
               <div
-                className={`mainheading ${martel.className} font-bold text-6xl`}
+                className={`mainheading ${martel.className} font-bold cust-text-6xl`}
               >
                 Our success story
               </div>
-              <div className={`subheading ${inter.className} text-xl mt-5 w-2/3`}>
+              <div className={`subheading ${inter.className} cust-text-xl mt-5`}>
                 We have engaged with over 600+ colleges, reaching more than
                 18,00,000+ students. We have forged associations with over 30+
                 prominent brands. We have successfully organized more than 100+
@@ -203,22 +203,22 @@ export default function Home() {
             </div>
           </div>
           <div className="flex justify-center mt-16">
-            <div className="flex">
+            <div className="flex number">
               <div className="college">
-                <div className="num text-7xl ">600+</div>
-                <div className="name text-center text-2xl font-medium">
+                <div className="num cust-text-8xl ">600+</div>
+                <div className="name text-center cust-text-2xl font-medium">
                   Colleges
                 </div>
               </div>
-              <div className="student">
-                <div className="num text-7xl">1.8M</div>
-                <div className="name text-center text-2xl font-medium">
+              <div className="college">
+                <div className="num cust-text-8xl">1.8M</div>
+                <div className="name text-center cust-text-2xl font-medium">
                   Students
                 </div>
               </div>
-              <div className="compi">
-                <div className="num text-7xl">100+</div>
-                <div className="name text-center text-2xl font-medium">
+              <div className="college">
+                <div className="num cust-text-8xl">100+</div>
+                <div className="name text-center cust-text-2xl font-medium">
                   Competition
                 </div>
               </div>
