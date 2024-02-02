@@ -91,12 +91,52 @@ body {
 }
 
 .side-content{
+  padding-left: 5vw;
+  width: 40vw;
+}
+.side-content-host{
+  width: 25vw;
+}
+.host{
+  padding: 10vh;
+}
+
+.workshop{
+  font-size: 3vh;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+
+.side-content-host2{
   width: 40vw;
 }
 
 .cust-text-xl{
   font-size: 2.5vh;
 }
+
+.cust-inp{
+  background-color: rgba(249, 249, 249, 1);
+  padding: 2vh 1.5vh;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  border-radius: 1vh;
+  width: -webkit-fill-available;
+
+}
+
+.cust-textarea{
+  background-color: rgba(249, 249, 249, 1);
+  padding: 2vh 1.5vh;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  border-radius: 1vh;
+  width: -webkit-fill-available;
+}
+.outer-form{
+  width: 32vw;
+}
+
 
 .video-card{
   /* width: 40vw; */
@@ -115,6 +155,7 @@ body {
   font-size: 4vh;
 }
 
+
 .bx2{
   color: rgba(210, 210, 210, 1) ;
 }
@@ -122,6 +163,12 @@ body {
 .cust-text-4xl{
   font-size: 6vh;
 }
+
+.cust-p{
+  font-size: 2.7vh;
+  padding: 2vh 3vh;
+}
+
 @media only screen and (max-width: 1024px) {
   .cust-text-6xl{
     font-size: 6vh;
@@ -130,6 +177,21 @@ body {
   .cust-w{
     width: 12vw;
   }
+  
+  .video-card{
+    padding: 5vh;
+  }
+
+  .cont-head{
+    font-size: 3vh;
+  }
+  .cont-body{
+    font-size: 2vh;
+  }
+  .numb{
+    font-size: 3vh;
+  }
+  
 }
 
 @media only screen and (max-width: 768px) {
@@ -172,6 +234,19 @@ body {
 }
 
 @media only screen and (max-width: 426px) {
+  .workshop{
+    font-size: 2vh;
+
+  }
+  .side-content-host{
+    width: 40vw;
+  }
+  .side-content-host2{
+    width: 70vw;
+  }
+  .outer-form{
+    width: 70vw;
+  }
   .logo{
     width: 40vw;
   }
@@ -214,6 +289,43 @@ body {
   } 
   .cust-text-2xl{
     font-size: 3vh;
+  }
+
+  .faq{
+    padding: 5vh;
+  }
+  .list{
+    padding-left: 5vh;
+    padding-right: 5vh;
+  }
+
+  .acc{
+    font-size: 2vh;
+  }
+  .cnt1{
+    flex-direction: column;
+  }
+  .followtext{
+    text-align: center;
+  }
+  .social_media{
+    justify-content: center;
+    padding-bottom: 5vh;
+  }
+  .logos{
+    display: flex;
+    justify-content: center;
+  }
+  .play{
+    justify-content: center;
+  }
+  .bx1,.bx2{
+    flex-direction: column;
+  }
+  .hm{
+    text-align: center;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
   }
 }
 

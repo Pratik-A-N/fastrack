@@ -1,21 +1,21 @@
 "use client";
 import Image from "next/image";
-import AppBgImg from "./bgImage";
-import Navbar from "./navbar";
-import appStorelogo from "../public/Assets/app_store.svg";
-import playStorelogo from "../public/Assets/play_store.svg";
-import videoPlaceholder from "../public/Assets/video_placeholder.svg";
-import howto from "../public/Assets/howto.svg";
+import AppBgImg from "../bgImage";
+import Navbar from "../navbar";
+import appStorelogo from "../../public/Assets/app_store.svg";
+import playStorelogo from "../../public/Assets/play_store.svg";
+import videoPlaceholder from "../../public/Assets/video_placeholder.svg";
+import howto from "../../public/Assets/howto.svg";
 import { Inter, Playball } from "next/font/google";
-import who from "../public/Assets/who.svg";
+import who from "../../public/Assets/who.svg";
 import { Martel_Sans } from "next/font/google";
 
 import { NextUIProvider } from "@nextui-org/react";
-import Footer from "./footer";
-import cont1 from "../public/Assets/cont1.svg";
-import Brand from "./brand";
-import Institute from "./institute";
-import Faq from "./faq";
+import Footer from "../footer";
+import cont1 from "../../public/Assets/cont1.svg";
+import Brand from "../brand";
+import Institute from "../institute";
+import Faq from "../faq";
 
 const inter = Inter({ subsets: ["latin"] });
 const playball = Playball({ subsets: ["latin"], weight: "400" });
